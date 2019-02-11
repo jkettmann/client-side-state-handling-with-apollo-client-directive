@@ -10,3 +10,11 @@
   justify-content: center;
   color: white;
 }
+
+.CloseButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
