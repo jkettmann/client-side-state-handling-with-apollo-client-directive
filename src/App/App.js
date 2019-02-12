@@ -3,6 +3,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import resolvers from './resolvers';
 import OpenModalButton from '../OpenModalButton';
+import Modal from '../Modal';
 import './App.css';
 
 const client = new ApolloClient({
@@ -20,6 +21,7 @@ const App = () => (
     <div className='App'>
       <OpenModalButton />
     </div>
+    <Modal />
   </ApolloProvider>
 );
 
