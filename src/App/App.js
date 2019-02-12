@@ -2,6 +2,7 @@ import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import resolvers from './resolvers';
+import ShoppingCart from '../ShoppingCart';
 import AddProductToCartButton from '../AddProductToCartButton';
 import OpenModalButton from '../OpenModalButton';
 import Modal from '../Modal';
@@ -21,6 +22,7 @@ client.cache.writeData({
 const App = () => (
   <ApolloProvider client={client}>
     <div className='App'>
+      <ShoppingCart />
       <AddProductToCartButton />
       <OpenModalButton />
     </div>
