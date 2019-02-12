@@ -21,8 +21,15 @@ const resolvers = {
         }
       `;
 
-      const product = { id, title, price, __typename: 'Product' };
-      const data = { selectedProducts: [product] };
+      const previous = cache.readQuery({ query });
+      const selectedProducts = previous.selectedProducts.concat({
+        id,
+        title,
+        price,
+        __typename: 'Product',
+      });
+      const data = { selectedProducts };
+
       cache.writeQuery({ query, data });
       return null;
     },
